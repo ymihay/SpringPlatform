@@ -2,9 +2,23 @@ package com.tenper.facebook.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Table;
+
+import org.springframework.data.annotation.Id;
+
+@Entity
+@Table(name = "posts")
 public class Post {
+	@Id
+	@GeneratedValue
 	private String id;
+	
+	@Column(nullable = false)
 	private String postMessage;
+	
 	private List<Tagg> taggs;
 
 	public Post(String postMessage, List<Tagg> taggs) {
