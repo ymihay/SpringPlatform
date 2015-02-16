@@ -3,6 +3,7 @@ package com.tenper.facebook.controllers;
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import com.tenper.facebook.controllers.UserController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class UserProfileControllerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		mvc = MockMvcBuilders.standaloneSetup(new UserProfileController()).build();
+		mvc = MockMvcBuilders.standaloneSetup(new UserController()).build();
 	}
 
 	@Test
