@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan("com.tenper.facebook.*")
 public class Application {
 
     public static void main(String[] args) {
